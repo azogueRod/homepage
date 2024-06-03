@@ -5,16 +5,44 @@ General styles
   padding: 0;
   box-sizing: border-box;
 }
+#navbar{
+  position: fixed;
+  left: 55%;
+  top:5%;
+  max-width: 576px;
+  margin: 0%;
+}
+
+#navbar ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+ border: none;
+  height: 80px;
+}
+#navbar ul li{
+  margin-left:10px ;
+  margin-right:10px ;
+  
+}
+
+.lihover a:hover{
+  
+  color:blue;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-
+  background:linear-gradient(-45deg,rgb(0, 0, 255) 0%,rgb(39, 39, 133) 20%,grey 70%,rgb(148, 139, 139) 100%);
   --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
-  --icon-color: #6a737d;
-  --border-color: #ff9a0045;
+  --secondary-text-color: #e4e6d5;
+  --title-text-color:rgb(28, 28, 158);
+  --durability-text-color: #e7dfbc9c;
+  --icon-color: #270c05;
+  --border-color: #ff9a00;
   --text-decoration-color: #ff9a00;
 }
 
@@ -25,9 +53,8 @@ body {
 }
 
 .fh {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
 }
 
 .fv {
@@ -68,11 +95,14 @@ body {
     margin-right: 0;
   }
 }
+
+
 Contact info styles
 
 .contact-info__header,
 .contact-info__sub-header {
   text-align: center;
+  font-size: 30px;
 }
 
 .contact-info__header {
@@ -80,10 +110,11 @@ Contact info styles
   margin-bottom: 15px;
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
+  text-underline-offset: 6px;
 }
 
 .contact-info__sub-header {
-  color: var(--secondary-text-color);
+  color: var(--title-text-color);
   margin-bottom: 30px;
 }
 
@@ -102,6 +133,9 @@ Contact info styles
   text-decoration: none;
   display: flex;
   justify-content: start;
+}
+.contact-info__item:hover {
+  color: var(--title-text-color);
 }
 
 .contact-info__item:not(:last-child) {
@@ -161,15 +195,17 @@ Intro and skills styles
 }
 
 .skills__header {
-  color: var(--secondary-text-color);
+  color: var(--title-text-color);
   text-align: center;
   margin-bottom: 15px;
+  font-size: 25px;
 }
 
 .skills__text {
-  color: var(--secondary-text-color);
+  color: var(--durability-text-color);
   text-align: justify;
 }
+
 Experience and additional info styles
 
 .experiences {
@@ -178,9 +214,10 @@ Experience and additional info styles
 }
 
 .experiences__header {
-  color: var(--secondary-text-color);
+  color: var(--title-text-color);
   text-align: left;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 .experiences__company-header-durability {
@@ -217,7 +254,7 @@ Experience and additional info styles
 }
 
 .experiences__company-project-responsibilities {
-  color: var(--secondary-text-color);
+  color: var(--durability-text-color);
   padding-left: 20px;
 }
 
@@ -230,9 +267,10 @@ Experience and additional info styles
 }
 
 .additional-info__education-header {
-  color: var(--secondary-text-color);
+  color: var(--title-text-color);
   text-align: left;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 .additional-info__education-university-durability {
@@ -249,7 +287,7 @@ Experience and additional info styles
 }
 
 .additional-info__education-university-name {
-  color: var(--secondary-text-color);
+  color: var(--durability-text-color);
 }
 
 .additional-info__languages {
@@ -257,11 +295,11 @@ Experience and additional info styles
 }
 
 .additional-info__languages-header {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 20px;
 }
 
 .additional-info__languages-item {
-  color: var(--secondary-text-color);
+  color: var(--durability-text-color);
 }
